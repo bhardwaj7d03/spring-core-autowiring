@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myeng" class="com.codesmines111.springcoredemo111.Engine">
+        <property name="entype" value="petrol"></property>
+        <property name="engno" value="2000"></property>
+        <property name="mfname" value="tata"></property>
+    </bean>
+
+    <bean id="mycar" class="com.codesmines111.springcoredemo111.Car">
+        <property name="carname" value="nexon"></property>
+        <property name="carcolor" value="red"></property>
+        <property name="carbrand" value="tata"></property>
+        <property name="eng" ref="myeng"></property>
+    </bean>
+
+</beans>
